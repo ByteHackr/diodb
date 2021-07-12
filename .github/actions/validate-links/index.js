@@ -3,6 +3,7 @@ const fsPromises = require('fs').promises;
 const http = require('http');
 const https = require('https');
 const zlib = require('zlib');
+require('tls').DEFAULT_MIN_VERSION = 'TLSv1';
 
 
 const MAX_CONCURRENT_REQUESTS = 8;
@@ -11,7 +12,7 @@ const MAX_CONCURRENT_REQUESTS = 8;
 // Requests responses (e.g. by sending requests to many URLs from different
 // programs on the same bug bounty platform). With too many concurrent
 // requests, we may also hit other resource limits.
-const PROGRAM_LIST_FILE = 'program-list/program-list.json';
+const PROGRAM_LIST_FILE = './program-list.json';
 const SOCKET_IDLE_TIMEOUT = 10 * 1000; // 10 seconds
 
 
@@ -268,6 +269,9 @@ const SOCKET_IDLE_TIMEOUT = 10 * 1000; // 10 seconds
       let invalidURLsCount = 0;
       for (const [index, result] of results.entries()) {
         const program = programsList[index];
+        if (program.policy_url_status == "dead"){
+          continue
+        }
         const programInfo = `${index + 1}. ${program.program_name} ` +
             `(${program.policy_url}): `;
         if (result.status === 'rejected') {

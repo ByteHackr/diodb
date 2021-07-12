@@ -8,6 +8,15 @@ A true, community-powered, vendor agnostic directory of all known VDP and BBPs, 
 - Availability rewards, hall of fame, swag
 - Disclosure policy
 
+### Quick Links
+
+|Purpose|Link|
+|-|-|
+| Search through the database front-end  | [https://disclose.io/programs](https://disclose.io/programs)  |
+| Download the raw database in .json format  | [https://github.com/disclose/diodb/raw/master/program-list.json](https://github.com/disclose/diodb/raw/master/program-list.json)  |
+| Join disclose.io Community Forum  | [https://community.disclose.io](https://community.disclose.io) |
+| Create a Vulnerability Disclosure Program (VDP) | [https://github.com/disclose/dioterms](https://github.com/disclose/dioterms) |
+
 ### Why does diodb exist?
 
 diodb exists to drive the adoption of Safe Harbor for hackers and promote the cybersecurity posture of early adopters, simplify the process of finding the right contacts and channel at an organization, and help both finders and vendors align around the expectations of engagement. It also provides a simple, vendor-agnostic point of engagement for program operators, potential program operators, and the security community to maintain updates to their program. 
@@ -16,7 +25,7 @@ diodb exists to drive the adoption of Safe Harbor for hackers and promote the cy
 
 ### Getting started
 
-If you have new VDP or bug bounty program information to add, update, or delete in the [#diodb open-source vulnerability disclosure and bug bounty program list](https://github.com/disclose/diodb/blob/master/program-list/program-list.json), we'd love you to contribute by issuing a Pull Request.
+If you have new VDP or bug bounty program information to add, update, or delete in the [#diodb open-source vulnerability disclosure and bug bounty program list](https://github.com/disclose/diodb/blob/master/program-list.json), we'd love you to contribute by issuing a Pull Request.
 
 If you're new to Github, [this article](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) is a good primer on how PRs work. If you'd like to help us create tooling to allow updates without the use of Git and PRs, get in touch at hello@disclose.io.
 
@@ -52,3 +61,9 @@ Some examples of this include:
 ## License
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">disclose</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://disclose.io" property="cc:attributionName" rel="cc:attributionURL">disclose.io</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+3. Does the policy talk about "not legally pursuing researchers" or use similar language, but does not explicitly grant authorization and/or exemption for security testing? Are any of the key parameters described above ambiguously defined or missing completely? If so, you should choose **"Partial"**. 
+
+## Other tips  
+
+* Launch date can be tricky to find on some programs e.g. it's buried in a press release or blog post and not on the program page. If you think you've found a launch date, please include a reference to where you found it in the PR so the maintainers can check.
+* Some companies will offer these things on an ad-hoc or case-by-case basis, but this doesn't mean they're committing to do it for everyone. Be careful with the bug_bounty, swag, and hall_of_fame options. As always, read the program page.
